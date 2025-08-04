@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FCPD Crime Project</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #f7f7f7;
+    }
+    /* Top navigation bar */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #ffffff;
+      padding: 1rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    nav .logo {
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+    nav a {
+      text-decoration: none;
+      color: #000;
+      font-size: 0.95rem;
+      margin-left: 1rem;
+    }
+    /* Main content area */
+    main {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      height: calc(100vh - 68px); /* Subtract nav height/padding */
+      text-align: center;
+      padding: 2rem;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      margin-bottom: 2rem;
+      color: #555;
+    }
+    input[type="text"] {
+      padding: 0.5rem;
+      font-size: 1rem;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      margin-bottom: 1rem;
+      width: 200px;
+    }
+    .btn-report {
+      display: inline-block;
+      padding: 0.75rem 2rem;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #fff;
+      background-color: #007bff;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-report:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <!-- Minimal Top Bar -->
+  <nav>
+    <div class="logo">FCPD Crime Analysis Project</div>
+    <div class="nav-links">
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <p><strong>Questions? <a href="goyalaniket105@gmail.com"> Contact me</a>.</p></strong>
+    <h1>FCPD Crime Analysis Project</h1>
+    <p>A personal project visualizing ZIP-level crime data from Fairfax County.</p>
+
+
+    <!-- ZIP Code Search Form -->
+    <form method="POST" action="/search">
+      <input 
+        type="text" 
+        name="zipcode" 
+        placeholder="Enter ZIP Code" 
+        required 
+      />
+      <br/>
+      <button type="submit" class="btn-report">Search</button>
+    </form>
+
+
+    <div style="margin-top: 3rem; font-size: 0.9rem; color: #555; max-width: 800px; margin-left: auto; margin-right: auto;">
+      <p><strong>Disclaimer:</strong> The crime data displayed on this website was retrieved on August 4, 2025 from publicly available Fairfax County Police Department (FCPD) reports. It is provided for informational and academic purposes only. The dataset represents crime reports compiled from a single week at the time of retrieval. </p>
+    
+      <p>This website is not affiliated with or endorsed by the Fairfax County Police Department, any governmental agency, or law enforcement entity. The data is not updated in real-time and may not reflect the most current or complete information about criminal activity in your area.</p>
+    
+      <p>Always refer to official law enforcement sources for current crime data and emergency information. Use of this website is at your own discretion. The creator of this site assumes no responsibility for the accuracy, completeness, or timeliness of the data presented.</p>
+    </div>
+
+    <footer style="text-align:center; margin-top: 2rem; font-size: 0.8rem; color: #777;">
+      © 2025 Aniket Goyal. This website is a personal project. All rights reserved.
+    </footer>
+    
+
+  </main>
+</body>
+</html>
