@@ -1,6 +1,8 @@
 from flask import Flask, render_template, request
 import pandas as pd
 import json
+import os 
+
 app = Flask(__name__)
 columns = [
     "REPORT_ID", "CASE_NUMBER", "OFFENSE", "DATE_REPORTED", "TIME", 
@@ -46,4 +48,5 @@ def search():
     )
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host = "0.0.0.0", port=port)
